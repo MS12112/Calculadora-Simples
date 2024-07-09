@@ -3,6 +3,9 @@ from tkinter import *
 
 root = Tk()
 root.title("Calculdora")
+# Define a cor de fundo da janela para roxo
+root.config(bg="black")
+
 
 #Funções
 def deletar():
@@ -71,13 +74,14 @@ def click_button(numero):
     visor.insert(END, str(atual)+ str(numero))
 
 
-lb1 = Label(root, text="CALCULADORA", font=("verdana", 14, "bold"), pady=10)
-lb1.pack()
+titulo = Label(root, text="CALCULADORA", font=("verdana", 14, "bold"), pady=10, bg='black', fg='white')
+titulo.pack()
 
-visor = Entry(root, width=40, bg="lightblue", )
+#Visor
+visor = Entry(root, width=40, bg="lightblue",)
 visor.pack(pady=3, ipady=10)
 
-#Fileira 1:]
+#Fileira 1
 bt1 = Button(root, text="1", bg="lightblue", pady=14, padx=14, bd=4, command= lambda: click_button(1))
 bt1.place(x=10, y=100)
 
